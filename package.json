@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://roman-nestorko92.github.io/weather",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
