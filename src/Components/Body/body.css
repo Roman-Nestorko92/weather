@@ -1,0 +1,34 @@
+.dayTime {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 50px auto;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+}
+
+.allBody {
+  text-align: center;
+}
+
+.daytime {
+  text-decoration: underline;
+  color: #212121;
+}
+
+.weatheData {
+  font-weight: 600;
+  font-family: sans-serif;
+  font-style: oblique;
+}
+
+.descriptionData {
+  font-weight: 600;
+  font-family: sans-serif;
+  font-style: oblique;
+  color: #212121;
+  margin-top: 20px;
+}
