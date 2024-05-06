@@ -17,6 +17,11 @@ function App() {
           />
         </Route>
       </Routes>
+      <div className="background">
+        <div className="bg-wave"></div>
+        <div className="bg-wave"></div>
+        <div className="bg-wave"></div>
+      </div>
     </>
   );
 }

@@ -30,43 +30,57 @@ export default function Body() {
 
   return (
     <>
-      <ul className="allBody">
-        <ul className="dayTime">
-          <li>
-            <h3 className="daytime">Day: {new Date().toLocaleDateString()} </h3>
-          </li>
-          <li>
-            <h3 className="daytime">
-              Time: {currentTime.toLocaleTimeString()}{" "}
-            </h3>
-          </li>
-        </ul>
-        <li>
-          <input
-            type="text"
-            placeholder="search city"
-            value={onChange}
-            onChange={(e) => setOnChange(e.target.value)}
-          />{" "}
-          <button onClick={onSearchButton}>search</button>
-        </li>
-        {typeof weatherData.main !== "undefined" ? (
-          <ul>
+      <div>
+        <ul className="allBody">
+          <ul className="dayTime">
             <li>
-              <h2> {weatherData.name}</h2>
+              <h3 className="daytime">
+                Day
+                <span className="timeWord"> :</span>{" "}
+                {new Date().toLocaleDateString()}{" "}
+              </h3>
             </li>
             <li>
-              <h2> {weatherData.main.temp} °C</h2>
-            </li>
-            <li className="weatheData">{weatherData.weather[0].main}</li>
-            <li className="descriptionData">
-              [{weatherData.weather[0].description}]
+              <h3 className="daytime">
+                Time
+                <span className="timeWord"> :</span>{" "}
+                {currentTime.toLocaleTimeString()}{" "}
+              </h3>
             </li>
           </ul>
-        ) : (
-          ""
-        )}
-      </ul>
+          <li>
+            <input
+              className="inputSearch"
+              type="text"
+              placeholder="search city"
+              value={onChange}
+              onChange={(e) => setOnChange(e.target.value)}
+            />{" "}
+            <button
+              className="buttonSearch"
+              onClick={onSearchButton}
+            >
+              search
+            </button>
+          </li>
+          {typeof weatherData.main !== "undefined" ? (
+            <ul>
+              <li>
+                <h2 className="townData"> {weatherData.name}</h2>
+              </li>
+              <li>
+                <h2 className="temperatureData"> {weatherData.main.temp} °C</h2>
+              </li>
+              <li className="weatheData">{weatherData.weather[0].main}</li>
+              <li className="descriptionData">
+                [{weatherData.weather[0].description}]
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
+        </ul>
+      </div>
     </>
   );
 }

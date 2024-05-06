@@ -1,13 +1,16 @@
 .head {
-  border-bottom: 1px solid red;
   margin-bottom: 20px;
-  box-shadow: 2px 7px 12px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerBox {
+  padding: 0 5%;
 }
 
 .Title {
-  color: rgb(247, 83, 83);
-  text-align: center;
-
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
+  text-align: center;
 }

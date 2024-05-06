@@ -14,15 +14,24 @@
   text-align: center;
 }
 
-.daytime {
-  text-decoration: underline;
-  color: #212121;
+.timeWord {
+  font-family: "sans-serif";
+  color: red;
 }
 
 .weatheData {
   font-weight: 600;
   font-family: sans-serif;
   font-style: oblique;
+  color: #212121;
+}
+
+.temperatureData {
+  color: #212121;
+}
+
+.townData {
+  color: #212121;
 }
 
 .descriptionData {
@@ -31,4 +40,84 @@
   font-style: oblique;
   color: #212121;
   margin-top: 20px;
+}
+
+.buttonSearch {
+  background-color: transparent;
+  border-radius: 4px;
+  border-color: rgb(40, 40, 245);
+  padding: 2px 6px;
+
+  color: blue;
+}
+
+.inputSearch {
+  background-color: transparent;
+  border-color: rgb(40, 40, 245);
+  border-radius: 4px;
+}
+
+.bodyBox {
+  background-size: 500% 500%;
+  background: linear-gradient(
+    300deg,
+    rgb(134, 1, 125) 3% rgb(59, 153, 247) 38%,
+    rgb(96, 251, 241) 68%,
+    rgb(255, 0, 0) 98%
+  );
+  background-size: 500% 500%;
+  background-attachment: fixed;
+  animation: bg-gradient 30s ease;
+
+  @keyframes bg-gradient {
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}
+
+.bg-wave {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 100% 100% 0 0;
+  width: 200%;
+  height: 15em;
+  animation: wave 10s -3s linear infinite;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bg-wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear infinite;
+}
+
+.bg-wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+@keyframes wave {
+  0% {
+    transform: translateX(1);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(1);
+  }
 }

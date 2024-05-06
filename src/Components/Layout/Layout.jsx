@@ -5,8 +5,13 @@ import { Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>
-      <div className="head">
-        <h2 className="Title">Your Weather</h2>
+      <div className="headerBox">
+        <ul className="head">
+          <li>
+            <h2 className="Title">Weather</h2>
+          </li>
+          <li></li>
+        </ul>
       </div>
       <Outlet />
     </>
