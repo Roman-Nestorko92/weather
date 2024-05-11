@@ -1,6 +1,6 @@
-# This is a simple calendar that shows the weather and temperature in the city that can be found in the search also shows the location.
+## This is a simple calendar that shows the weather and temperature in the city that can be found in the search also shows the location.
 
-# The project is made with React.js frontend and Node.js backend.
+## The project is made with React.js frontend and Node.js backend.
 
 
 # Getting Started with Create React App
