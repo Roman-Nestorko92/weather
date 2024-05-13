@@ -45,14 +45,27 @@ export default function Body() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const onSearchButton = () => {
-    fetch(
-      `${apiKey.base}weather?q=${onChange}&units=metric&APPID=${apiKey.key}`
-    )
-      .then((res) => res.json())
-      .then((results) => {
-        setWeatherData(results);
-      });
+  const base = process.env.API_BASE_URL;
+  const key = process.env.API_KEY;
+
+  // const onSearchButton = async () => {
+  //   fetch(
+  //     `${apiKey.base}weather?q=${onChange}&units=metric&APPID=${apiKey.key}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((results) => {
+  //       setWeatherData(results);
+  //     });
+  //   setOnChange("");
+  // };
+
+  const onSearchButton = async () => {
+    const url = `${base}weather?q=${onChange}&units=metric&APPID=${key}`;
+
+    const responce = await axios.get(url);
+    const data = responce.data;
+    setWeatherData(data);
+
     setOnChange("");
   };
 
