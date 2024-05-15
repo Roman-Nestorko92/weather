@@ -45,15 +45,33 @@ export default function Body() {
     return () => clearInterval(intervalId);
   }, []);
 
+  // const onSearchButton = async () => {
+  //   fetch(
+  //     `${apiKey.base}weather?q=${onChange}&units=metric&APPID=${apiKey.key}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((results) => {
+  //       setWeatherData(results);
+  //     });
+  //   setOnChange("");
+  // };
+
   const onSearchButton = async () => {
-    fetch(
-      `${apiKey.base}weather?q=${onChange}&units=metric&APPID=${apiKey.key}`
-    )
-      .then((res) => res.json())
-      .then((results) => {
-        setWeatherData(results);
-      });
-    setOnChange("");
+    try {
+      const response = await axios.get(
+        "https://weather-back-82hq.onrender.com/weather/city",
+        {
+          params: {
+            q: onChange,
+          },
+        }
+      );
+
+      setWeatherData(response.data);
+      setOnChange("");
+    } catch (error) {
+      console.error("Помилка отримання погоди з бекенду:", error);
+    }
   };
 
   return (
