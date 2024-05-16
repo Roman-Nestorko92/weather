@@ -1,6 +1,16 @@
-## This is a simple calendar that shows the weather and temperature in the city that can be found in the search also shows the location.
+The "Weather" project is a web application that allows users to retrieve weather information for different locations. The application utilizes data from the OpenWeatherMap API to obtain weather conditions.
 
-## The project is made with React.js frontend and Node.js backend.
+Functionalities:
+Current Location Weather: Users can retrieve current weather conditions based on their current location. The application uses browser geolocation for this purpose.
+
+City-based Weather Search: Users can search for weather information for any city by entering the city name in the search field.
+
+Technical Details:
+# Frontend: The application has a frontend implemented using React.js. It interacts with users through a user interface, allowing them to input queries and display results.
+
+# Backend: The server-side is implemented using Node.js and Express.js. The backend processes requests to obtain weather data using the OpenWeatherMap API.
+
+OpenWeatherMap API: The application interacts with the OpenWeatherMap API to retrieve weather data based on location coordinates or city name.
 
 
 # Getting Started with Create React App
