@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { apiKey } from "../api/getWeather";
 import axios from "axios";
 import "./body.css";
 
@@ -44,17 +43,6 @@ export default function Body() {
 
     return () => clearInterval(intervalId);
   }, []);
-
-  // const onSearchButton = async () => {
-  //   fetch(
-  //     `${apiKey.base}weather?q=${onChange}&units=metric&APPID=${apiKey.key}`
-  //   )
-  //     .then((res) => res.json())
-  //     .then((results) => {
-  //       setWeatherData(results);
-  //     });
-  //   setOnChange("");
-  // };
 
   const onSearchButton = async () => {
     try {
