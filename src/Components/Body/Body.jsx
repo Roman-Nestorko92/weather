@@ -83,7 +83,9 @@ export default function Body() {
             </li>
           </ul>
           {weatherCurrentPosition ? (
-            <p>My position: {weatherCurrentPosition} </p>
+            <p className="myPositionTitle">
+              My position: {weatherCurrentPosition}{" "}
+            </p>
           ) : (
             <p>Отримання погодних даних...</p>
           )}
