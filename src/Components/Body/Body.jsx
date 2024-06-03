@@ -87,7 +87,7 @@ export default function Body() {
               My position: {weatherCurrentPosition}{" "}
             </p>
           ) : (
-            <p>Отримання погодних даних...</p>
+            <p>receiving weather data...</p>
           )}
 
           <li>
